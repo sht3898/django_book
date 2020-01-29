@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'books',
+    'polls.apps.PollsConfig',
+    'books.apps.BooksConfig',
     'rest_framework',
 ]
 
@@ -120,3 +121,28 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'formatters': {
+#         'verbose': {
+#             'format': "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
+#             'datefmt': "%d/%b/%Y %H:%M:%S"
+#         },
+#     },
+#     'handlers': {
+#         'file': {
+#             'level': 'DEBUG',
+#             'class': 'logging.FileHandler',
+#             'filename': os.path.join(BASE_DIR, 'logs', 'mysite.log'),
+#             'formatter': 'verbose'
+#         },
+#         'loggers': {
+#             'polls': {
+#                 'handlers': ['file'],
+#                 'level': 'DEBUG',
+#             },
+#         },
+#     }
+# }
